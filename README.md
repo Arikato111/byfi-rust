@@ -7,7 +7,7 @@ convert binary text back to files.
 ### Build
 
 - `cargo build --release`
-- copy and rename ./target/release/byfi to byfi to your path
+- copy and rename `./target/release/byfi` to byfi to your path
 
 ### Usage
 
