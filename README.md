@@ -12,6 +12,8 @@ convert binary text back to files.
 ### Usage
 
 ```
+byfi - bytes to file or file to bytes
+
 Usage:
     byfi [COMMAND] [OPTION] FILE_NAME
 
@@ -23,6 +25,7 @@ Option:
     -b [base]                   ex. `byfi -b 16 file.png` 
                                 [base] = 2 | 8 | 16.
                                 convert to 2 8 or 16 base.
+    --key [string]              to encrypt of decript your file
 
 Example:
     byfi byte file.png          convert `file.png` to bytes text.
