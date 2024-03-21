@@ -1,5 +1,9 @@
+use byfi::{
+    bytes_to_file,
+    encryption::{decript_file, encript_file},
+    file_to_bytes,
+};
 use std::env::args;
-use byfi::{bytes_to_file, file_to_bytes};
 
 fn main() {
     let mut argv = args().collect::<Vec<String>>();
@@ -8,6 +12,8 @@ fn main() {
         Some(action) => match action.as_str() {
             "byte" => file_to_bytes(&mut argv),
             "file" => bytes_to_file(&mut argv),
+            "en" => encript_file(&argv),
+            "de" => decript_file(&argv),
             "-h" | "--help" => help(),
             "-v" | "--version" => show_version(),
             _ => {
