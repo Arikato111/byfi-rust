@@ -37,6 +37,8 @@ Usage:
 Command:
     byte                        convert file to bytes text.
     file                        convert bytes text to file.
+    en                          encript file
+    de                          decript file
 
 Option:
     -b [base]                   ex. `byfi -b 16 file.png` 
