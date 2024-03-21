@@ -1,1 +1,3 @@
-pub mod main;
+pub mod cription;
+
+pub use cription::{decript, encript};

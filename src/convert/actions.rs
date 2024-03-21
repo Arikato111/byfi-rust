@@ -1,9 +1,9 @@
 use crate::{
     convert_byte::to_base_string,
-    encryption::{self, main::decript},
+    encryption::{decript, encript},
     option::OptionAction,
 };
-use std::fs::{self};
+use std::fs;
 
 pub fn file_to_bytes(argv: &mut Vec<String>) {
     let options = OptionAction::parse(argv.as_ref());
@@ -17,7 +17,7 @@ pub fn file_to_bytes(argv: &mut Vec<String>) {
     byte_string += format!(" {}", options.base_type).as_str();
     let mut content = fs::read(options.file_path).expect("error read file");
     if let Some(v) = options.key {
-        content = encryption::main::encript(&content, &v);
+        content = encript(&content, &v);
     }
     byte_string += to_base_string(&content, options.base_type).as_str();
     fs::write(format!("./{}.txt", file_name), byte_string).expect("cannot write file");

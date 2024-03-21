@@ -1,5 +1,5 @@
 use std::env::args;
-use text_byte_file::{bytes_to_file, file_to_bytes};
+use byfi::{bytes_to_file, file_to_bytes};
 
 fn main() {
     let mut argv = args().collect::<Vec<String>>();
