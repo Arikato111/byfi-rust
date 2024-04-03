@@ -1,8 +1,6 @@
 ## BYFI
 
-convert file to bytes text and writes it to text file.
-
-convert binary text back to files.
+command line program to convert binary file to bytes text file or convert byte text file to binary file. and encript decrypt file.
 
 ### Build
 
@@ -20,6 +18,8 @@ Usage:
 Command:
     byte                        convert file to bytes text.
     file                        convert bytes text to file.
+    en                          encript file
+    de                          decript file
 
 Option:
     -b [base]                   ex. `byfi -b 16 file.png` 
@@ -31,5 +31,4 @@ Example:
     byfi byte file.png          convert `file.png` to bytes text.
                                 output is `file.png.txt`.
     byfi file file.png.txt      convert back to file.
- 
 ```
